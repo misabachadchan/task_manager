@@ -45,14 +45,36 @@ A simple and modern **Task Management Web Application** built using:
 ## 📂 Project Structure
 task_manager/
 ├── config/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
 ├── tasks/
+│   ├── migrations/
+│   │   └── __init__.py
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── urls.py
+│   └── views.py
+│
 ├── templates/
-│ ├── base.html
-│ └── tasks/
-│ ├── login.html
-│ ├── register.html
-│ ├── task_list.html
-│ ├── task_form.html
-│ └── task_confirm_delete.html
-├── venv/
-└── manage.py
+│   ├── base.html
+│   └── tasks/
+│       ├── login.html
+│       ├── register.html
+│       ├── task_list.html
+│       ├── task_form.html
+│       └── task_confirm_delete.html
+│
+├── static/            
+│
+├── venv/              ← (ignored in GitHub)
+│
+├── manage.py
+├── requirements.txt
+└── README.md
