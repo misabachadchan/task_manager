@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete Task - Task Manager{% endblock %}
+
+{% block content %}
+<div class="max-w-md mx-auto">
+    <div class="bg-white rounded-lg shadow-md p-8">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Delete Task</h1>
+        
+        <p class="text-gray-600 mb-6">
+            Are you sure you want to delete the task <strong>"{{ task.title }}"</strong>? This action cannot be undone.
+        </p>
+        
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+            <div class="flex gap-4">
+                <button type="submit" class="flex-1 bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition font-semibold">
+                    Yes, Delete
+                </button>
+                <a href="{% url 'task_list' %}" class="flex-1 text-center bg-gray-200 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-300 transition font-semibold">
+                    Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
